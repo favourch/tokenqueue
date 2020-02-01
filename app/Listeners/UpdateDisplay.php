@@ -19,7 +19,7 @@ class UpdateDisplay
     {
         //
     }
-
+  
     // ToDo: ASER - Display - To get display data for a particular department only, modify this Call::with and add a where condition E.G ->where('department_id', '1')
     public function handle(TokenCalled $event)
     {

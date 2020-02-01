@@ -18,7 +18,10 @@ Route::group(['middleware' => 'install'], function() {
     // Login
     Route::get('login', ['as' => 'get_login', 'uses' => 'Auth\LoginController@showLoginForm']);
     Route::post('login', ['as' => 'post_login', 'uses' => 'Auth\LoginController@login']);
-
+    
+    // create
+    Route::get('create', ['as' => 'create', 'uses' => 'UserController@create']);
+    
     // Forgot Password
     Route::get('password/email', ['as' => 'get_email', 'uses' => 'Auth\ForgotPasswordController@showLinkRequestForm']);
     Route::post('password/email', ['as' => 'post_email', 'uses' => 'Auth\ForgotPasswordController@sendResetLinkEmail']);
